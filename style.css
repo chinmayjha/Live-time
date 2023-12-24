@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #272727;
+  color: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79vh;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.display-date {
+  left: 6rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: rgb(189,189,189);
+  width: 70%;
+  height: 6%;
+  border-radius: 9999px;
+  position: relative;
+  color: #101010a3;
+}
+
+.display-time {
+  display: flex;
+  font-size: 15rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+}
+
+  .time {
+    font-size: 1.5em;
+    color: #000;
+  }
+  
+  .period {
+    font-size: 32px;
+    position: relative;
+    top: 12rem;
+    color: #777;
+  }
+  .blink {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  color: white;
+  bottom: 0%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: salmon;
+}
+
+/* Heart emoji and hover effect */
+.footer p {
+  position: relative;
+  display: inline-block;
+}
+
+.heart {
+  cursor: pointer;
+}
+
+.heart:hover::before {
+  content: 'LOVE';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+  color: black;
+  font-size: 12px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.heart::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+  color: black;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Media query for devices smaller than 600px */
+@media screen and (max-width: 599px) {
+  body {
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .display-date {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+  .display-time {
+    font-size: 10rem;
+  }
+
+  .period {
+    font-size: 24px;
+    top: 8rem;
+  }
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .display-date {
+    top: 11rem;
+    width: 71%;
+    font-size: 1.3rem;
+    left: 5rem;
+  }
+
+  .display-time {
+    left: 1rem;
+    font-size: 8rem;
+    top: 10rem;
+    position: relative;
+  }
+
+  .period {
+    font-size: 24px;
+    top: 8rem;
+  }
+}
+
+/* Media query for medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .display-date {
+    width: 72%;
+    left: 1rem;
+    font-size: 1.4rem;
+  }
+.period {
+  top:7rem
+}
+  .display-time {
+    font-size: 8rem;
+    position: relative;
+  }
+footer {
+  bottom:5rem
+}
+  /* Adjust other styles for medium-sized screens if needed */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+  .display-date {
+    width: 70%;
+    font-size: 1.6rem;
+  }
+
+  .display-time {
+    font-size: 15rem;
+  }
+
+  /* Adjust other styles for larger screens if needed */
+}
