@@ -15,11 +15,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 79vh;
+  width: 100vw;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.bmc-btn-container {
+  position: absolute;
+  top: 15px;
+  right: 25px;
 }
 .display-date {
   left: 6rem;
@@ -151,14 +157,15 @@ footer a:hover {
 @media screen and (max-width: 600px) {
   body {
     align-items: flex-start;
-    height: auto;
+    height: 98vh;
+    width: 98vw;
   }
 
   .display-date {
     top: 11rem;
-    width: 71%;
+    width: 92%;
     font-size: 1.3rem;
-    left: 5rem;
+    left: 2rem;
   }
 
   .display-time {
@@ -176,8 +183,12 @@ footer a:hover {
 
 /* Media query for medium screens */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    height: 98vh;
+    width: 98vw;
+  }
   .display-date {
-    width: 72%;
+    width: 93%;
     left: 1rem;
     font-size: 1.4rem;
   }
@@ -189,7 +200,7 @@ footer a:hover {
     position: relative;
   }
 footer {
-  bottom:5rem
+  bottom: 0rem;
 }
   /* Adjust other styles for medium-sized screens if needed */
 }
