@@ -4,30 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Live Time & Date - Beautiful Real-time Digital Clock</title>
-    <meta name="description" content="A stunning real-time digital clock displaying current time and date with modern design, elegant animations, and responsive layout.">
-    <meta name="keywords" content="live time, digital clock, current date, real-time, online clock, time display, modern clock">
+    <title>Live Time & Date - Beautiful Real-time Digital Clock | Modern Clock Display</title>
+    <meta name="description" content="Experience a stunning real-time digital clock with beautiful animations, modern design, and responsive layout. Perfect for any desktop or mobile device. Features live time updates, elegant gradients, and premium glassmorphism UI.">
+    <meta name="keywords" content="live time, digital clock, current date, real-time, online clock, time display, modern clock, beautiful clock, animated clock, glassmorphism, responsive clock, desktop clock, mobile clock, web clock">
     <meta name="author" content="Chinmay Jha">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#6366f1">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chinmayjha.github.io/Live-time/">
+    <meta property="og:url" content="https://chinmayjha.tech/Live-time/">
     <meta property="og:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
-    <meta property="og:description" content="A stunning real-time digital clock with modern design and elegant animations.">
+    <meta property="og:description" content="Experience a stunning real-time digital clock with modern design, elegant animations, and responsive layout for any device.">
+    <meta property="og:image" content="https://chinmayjha.tech/Live-time/favicon.svg">
     <meta property="og:site_name" content="Live Time & Date">
-    <meta property="og:image" content="https://chinmayjha.github.io/Live-time/favicon.svg">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://chinmayjha.github.io/Live-time/">
+    <meta name="twitter:url" content="https://chinmayjha.tech/Live-time/">
     <meta name="twitter:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
-    <meta name="twitter:description" content="A stunning real-time digital clock with modern design and elegant animations.">
-    <meta name="twitter:image" content="https://chinmayjha.github.io/Live-time/favicon.svg">
+    <meta name="twitter:description" content="Experience a stunning real-time digital clock with modern design and elegant animations.">
+    <meta name="twitter:image" content="https://chinmayjha.tech/Live-time/favicon.svg">
+    <meta name="twitter:creator" content="@chinmayjha_dev">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="application-name" content="Live Time & Date">
+    <meta name="apple-mobile-web-app-title" content="Live Time">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="msapplication-navbutton-color" content="#6366f1">>
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
     
     <!-- Preconnect for better font loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +49,30 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Live Time & Date",
+      "description": "A beautiful real-time digital clock with modern design and elegant animations",
+      "url": "https://chinmayjha.tech/Live-time/",
+      "applicationCategory": "Utility",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Person",
+        "name": "Chinmay Jha",
+        "url": "https://chinmayjha.tech"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "screenshot": "https://chinmayjha.tech/Live-time/favicon.svg"
+    }
+    </script>
 </head>
 <body>
     <main class="app">
@@ -73,21 +111,29 @@
             </section>
         </div>
         
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="footer-credit">
-                    Made with <span class="heart" role="img" aria-label="love">❤️</span> by
-                    <a href="https://chinmayjha.tech" class="author-link" target="_blank" rel="noopener noreferrer">
-                        Chinmay
-                    </a>
-                </p>
-                <div class="footer-copyright">
-                    <span id="copyright-year"></span>
-                </div>
-            </div>
+        <!-- Footer start -->
+        <footer class="foot">
+          <p class="credit">
+            Made with ❤️ by
+            <a
+              href="https://chinmayjha.tech"
+              class="chinmay-link"
+              rel="noopener"
+              >Chinmay</a
+            >
+          </p>
+          <span class="copyright" id="copyright"></span>
         </footer>
+        <!-- Footer end -->
     </main>
+    
+    <script>
+        // Dynamic copyright year on the right
+        const copyright = document.getElementById("copyright");
+        if (copyright) {
+          copyright.textContent = `Copyright © ${new Date().getFullYear()}`;
+        }
+    </script>
     
     <!-- Scripts -->
     <script src="script.js"></script>

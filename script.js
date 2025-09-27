@@ -18,8 +18,7 @@ class LiveClock {
       dayName: document.getElementById('day-name'),
       dayNumber: document.getElementById('day-number'),
       monthName: document.getElementById('month-name'),
-      year: document.getElementById('year'),
-      copyrightYear: document.getElementById('copyright-year')
+      year: document.getElementById('year')
     };
     
     this.months = [
@@ -51,7 +50,6 @@ class LiveClock {
     // Set initial time and date
     this.updateTime();
     this.updateDate();
-    this.updateCopyright();
     
     // Start the clock
     this.start();
@@ -118,37 +116,21 @@ class LiveClock {
   }
   
   /**
-   * Update copyright year
-   */
-  updateCopyright() {
-    if (this.elements.copyrightYear) {
-      const currentYear = new Date().getFullYear();
-      this.elements.copyrightYear.textContent = `Copyright © ${currentYear}`;
-    }
-  }
-  
-  /**
-   * Update element with smooth animation and error handling
+   * Update element with smooth animation
    */
   updateElementWithAnimation(element, newValue) {
     if (!element || element.textContent === newValue.toString()) return;
     
-    try {
-      // Add transition effect
-      element.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
-      element.style.opacity = '0.7';
-      element.style.transform = 'scale(0.98)';
-      
-      setTimeout(() => {
-        element.textContent = newValue;
-        element.style.opacity = '1';
-        element.style.transform = 'scale(1)';
-      }, 150);
-    } catch (error) {
-      // Fallback to direct update if animation fails
+    // Add transition effect
+    element.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
+    element.style.opacity = '0.7';
+    element.style.transform = 'scale(0.98)';
+    
+    setTimeout(() => {
       element.textContent = newValue;
-      console.warn('Animation failed, using direct update:', error);
-    }
+      element.style.opacity = '1';
+      element.style.transform = 'scale(1)';
+    }, 150);
   }
   
   /**
@@ -194,17 +176,6 @@ class LiveClock {
         this.updateTime();
         this.updateDate();
       }
-    });
-    
-    // Handle page focus/blur for additional performance optimization
-    window.addEventListener('focus', () => {
-      this.isVisible = true;
-      this.updateTime();
-      this.updateDate();
-    });
-    
-    window.addEventListener('blur', () => {
-      this.isVisible = false;
     });
   }
   
