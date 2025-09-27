@@ -249,37 +249,20 @@ body {
 }
 
 .chinmay-link {
-  color: var(--accent);
+  background: linear-gradient(90deg, #a855f7, #ec4899, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease;
   text-decoration: none;
-  font-weight: 500;
-  transition: all var(--transition-fast);
-  position: relative;
-  padding: 0 var(--space-1);
-  border-radius: var(--radius-sm);
 }
-
-.chinmay-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width var(--transition-fast);
-  border-radius: var(--radius-full);
-}
-
 .chinmay-link:hover,
-.chinmay-link:focus {
-  color: var(--accent-dark);
-  background: rgba(59, 130, 246, 0.1);
-  transform: translateY(-1px);
-}
-
-.chinmay-link:hover::after,
-.chinmay-link:focus::after {
-  width: 100%;
+.chinmay-link:focus,
+.chinmay-link:active{
+  background-position: right center;
+  -webkit-text-fill-color:transparent !important;
+  text-decoration:none !important;
+  filter:none !important;
 }
 
 .copyright {
@@ -463,3 +446,4 @@ body {
   background: var(--accent);
   color: var(--white);
 }
+
