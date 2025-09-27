@@ -1,7 +1,7 @@
 /* ===== LIVE TIME & DATE - PREMIUM MODERN STYLES ===== */
 
 /* Performance-optimized Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* ===== CSS CUSTOM PROPERTIES (DESIGN SYSTEM) ===== */
 :root {
@@ -39,31 +39,31 @@
   --neutral-950: #0a0a0a;
   
   /* Semantic Colors */
-  --background: #0a0a0a;
+  --background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   --background-secondary: #111111;
   --background-tertiary: #1a1a1a;
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --surface-active: rgba(255, 255, 255, 0.09);
-  --surface-glass: rgba(255, 255, 255, 0.05);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-active: rgba(255, 255, 255, 0.12);
+  --surface-glass: rgba(255, 255, 255, 0.06);
   
   --text-primary: #ffffff;
-  --text-secondary: #d4d4d4;
-  --text-tertiary: #a3a3a3;
-  --text-muted: #737373;
+  --text-secondary: #e2e8f0;
+  --text-tertiary: #cbd5e1;
+  --text-muted: #94a3b8;
   --text-inverse: #0a0a0a;
   
   /* Advanced Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary-500) 0%, var(--secondary-500) 50%, var(--accent-500) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--secondary-400) 0%, var(--primary-600) 100%);
-  --gradient-accent: linear-gradient(90deg, var(--primary-500), var(--secondary-500), var(--accent-500));
-  --gradient-background: radial-gradient(ellipse at top, var(--neutral-900) 0%, var(--neutral-950) 50%, var(--background) 100%);
-  --gradient-mesh: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(244, 63, 94, 0.1) 25%, rgba(245, 158, 11, 0.1) 50%, rgba(16, 185, 129, 0.1) 75%, rgba(139, 92, 246, 0.1) 100%);
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-rainbow: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  --gradient-mesh: conic-gradient(from 180deg at 50% 50%, #667eea 0deg, #764ba2 72deg, #f093fb 144deg, #f5576c 216deg, #4facfe 288deg, #667eea 360deg);
   
   /* Typography Scale */
-  --font-family-display: 'Poppins', system-ui, -apple-system, sans-serif;
-  --font-family-body: 'Poppins', system-ui, -apple-system, sans-serif;
-  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
+  --font-family-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
   
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */

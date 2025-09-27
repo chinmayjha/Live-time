@@ -128,21 +128,27 @@ class LiveClock {
   }
   
   /**
-   * Update element with smooth animation
+   * Update element with smooth animation and error handling
    */
   updateElementWithAnimation(element, newValue) {
     if (!element || element.textContent === newValue.toString()) return;
     
-    // Add transition effect
-    element.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
-    element.style.opacity = '0.7';
-    element.style.transform = 'scale(0.98)';
-    
-    setTimeout(() => {
+    try {
+      // Add transition effect
+      element.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
+      element.style.opacity = '0.7';
+      element.style.transform = 'scale(0.98)';
+      
+      setTimeout(() => {
+        element.textContent = newValue;
+        element.style.opacity = '1';
+        element.style.transform = 'scale(1)';
+      }, 150);
+    } catch (error) {
+      // Fallback to direct update if animation fails
       element.textContent = newValue;
-      element.style.opacity = '1';
-      element.style.transform = 'scale(1)';
-    }, 150);
+      console.warn('Animation failed, using direct update:', error);
+    }
   }
   
   /**
@@ -188,6 +194,17 @@ class LiveClock {
         this.updateTime();
         this.updateDate();
       }
+    });
+    
+    // Handle page focus/blur for additional performance optimization
+    window.addEventListener('focus', () => {
+      this.isVisible = true;
+      this.updateTime();
+      this.updateDate();
+    });
+    
+    window.addEventListener('blur', () => {
+      this.isVisible = false;
     });
   }
   
