@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
   ║         Made with ❤️ by Chinmay      ║
   ║                                      ║
   ║  🌐 https://chinmayjha.tech          ║
-  ║  📧 contact@chinmayjha.tech          ║
+  ║  📧 chinmayjha2021@gmail.com         ║
   ║                                      ║
   ║  Keyboard Shortcuts:                 ║
   ║  Alt + T: Announce time              ║
@@ -235,3 +235,4 @@ window.addEventListener('beforeunload', function() {
     window.liveClock.destroy();
   }
 });
+
