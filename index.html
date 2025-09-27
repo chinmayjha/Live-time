@@ -2,52 +2,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <title>Live Time & Date - Real-time Digital Clock</title>
-    <meta name="description" content="A beautiful real-time digital clock displaying current time and date. Features elegant design with live updates and responsive layout.">
-    <meta name="keywords" content="live time, digital clock, current date, real-time, online clock, time display">
+    
+    <!-- SEO Meta Tags -->
+    <title>Live Time & Date - Beautiful Real-time Digital Clock</title>
+    <meta name="description" content="A stunning real-time digital clock displaying current time and date with modern design, elegant animations, and responsive layout.">
+    <meta name="keywords" content="live time, digital clock, current date, real-time, online clock, time display, modern clock">
     <meta name="author" content="Chinmay Jha">
-    <meta name="theme-color" content="#a855f7">
-    <meta property="og:title" content="Live Time & Date - Real-time Digital Clock">
-    <meta property="og:description" content="A beautiful real-time digital clock displaying current time and date.">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chinmayjha.tech/Live-time/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Live Time & Date - Real-time Digital Clock">
-    <meta name="twitter:description" content="A beautiful real-time digital clock displaying current time and date.">
-</head>ng="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
+    <meta property="og:description" content="A stunning real-time digital clock with modern design and elegant animations.">
+    <meta property="og:site_name" content="Live Time & Date">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://chinmayjha.tech/Live-time/">
+    <meta name="twitter:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
+    <meta name="twitter:description" content="A stunning real-time digital clock with modern design and elegant animations.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    
+    <!-- Preconnect for better font loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <title>DATE AND TIME</title>
 </head>
 <body>
-    <div class="container">
-        <div class="display-time" aria-live="polite" aria-label="Current time"></div>
-      <div class="display-date">
-        <span id="day">day</span>,
-        <span id="daynum">00</span>
-        <span id="month">month</span>
-        <span id="year">0000</span>
-  </div>
-    </div>
-      <!-- Footer start -->
-      <footer class="foot">
-        <p class="credit">
-          Made with ❤️ by
-          <a
-            href="https://chinmayjha.tech"
-            class="chinmay-link"
-            rel="noopener"
-            >Chinmay</a
-          >
-        </p>
-        <span class="copyright" id="copyright"></span>
-      </footer>
-      <!-- Footer end -->
-      <script src="script.js"></script>
+    <main class="app">
+        <!-- Background Elements -->
+        <div class="bg-gradient"></div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="container">
+            <header class="header">
+                <h1 class="sr-only">Live Time & Date</h1>
+            </header>
+            
+            <section class="time-display-section" aria-live="polite">
+                <div class="time-container">
+                    <time class="display-time" id="display-time" aria-label="Current time">
+                        <span class="hours">12</span>
+                        <span class="separator">:</span>
+                        <span class="minutes">00</span>
+                        <span class="period">AM</span>
+                    </time>
+                </div>
+                
+                <div class="date-container">
+                    <time class="display-date" id="display-date" aria-label="Current date">
+                        <span class="day-name" id="day-name">Loading</span>,
+                        <span class="day-number" id="day-number">00</span>
+                        <span class="month-name" id="month-name">Month</span>
+                        <span class="year" id="year">0000</span>
+                    </time>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-credit">
+                    Made with <span class="heart" role="img" aria-label="love">❤️</span> by
+                    <a href="https://chinmayjha.tech" class="author-link" target="_blank" rel="noopener noreferrer">
+                        Chinmay Jha
+                    </a>
+                </p>
+                <div class="footer-copyright">
+                    <span id="copyright-year"></span>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
