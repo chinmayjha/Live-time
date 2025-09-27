@@ -66,3 +66,11 @@ updateDate();
 
 // Update time every second
 setInterval(showTime, 1000);
+
+// Dynamic copyright year on the right
+document.addEventListener('DOMContentLoaded', function() {
+  const copyright = document.getElementById("copyright");
+  if (copyright) {
+    copyright.textContent = `Copyright © ${new Date().getFullYear()}`;
+  }
+});

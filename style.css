@@ -90,6 +90,42 @@ footer a:hover {
   color: salmon;
 }
 
+/* New Footer start */
+.foot{
+  margin-top:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.foot .credit{
+  margin:0;
+  color:var(--muted, #888);
+}
+.chinmay-link {
+  background: linear-gradient(90deg, #a855f7, #ec4899, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease;
+  text-decoration: none;
+}
+.chinmay-link:hover,
+.chinmay-link:focus,
+.chinmay-link:active{
+  background-position: right center;
+  -webkit-text-fill-color:transparent !important;
+  text-decoration:none !important;
+  filter:none !important;
+}
+.copyright{
+  color:var(--muted, #888);
+  opacity:.9;
+  font-size:.95em;
+}
+/* New Footer end */
+
 /* Heart emoji and hover effect */
 .footer p {
   position: relative;
@@ -152,6 +188,21 @@ footer a:hover {
     font-size: 24px;
     top: 8rem;
   }
+
+    .foot {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.95em;
+      padding: 10px 0;
+    }
+    .foot .credit {
+      font-size: 1em;
+    }
+    .copyright {
+      font-size: 0.9em;
+      align-self: flex-end;
+    }
 }
 /* Media query for small screens */
 @media screen and (max-width: 600px) {

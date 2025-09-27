@@ -3,12 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Live Time & Date - Real-time Digital Clock</title>
+    <meta name="description" content="A beautiful real-time digital clock displaying current time and date. Features elegant design with live updates and responsive layout.">
+    <meta name="keywords" content="live time, digital clock, current date, real-time, online clock, time display">
+    <meta name="author" content="Chinmay Jha">
+    <meta name="theme-color" content="#a855f7">
+    <meta property="og:title" content="Live Time & Date - Real-time Digital Clock">
+    <meta property="og:description" content="A beautiful real-time digital clock displaying current time and date.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chinmayjha.github.io/Live-time/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Live Time & Date - Real-time Digital Clock">
+    <meta name="twitter:description" content="A beautiful real-time digital clock displaying current time and date.">
+</head>ng="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>DATE AND TIME</title>
 </head>
 <body>
     <div class="container">
-        <div class="display-time"></div>
+        <div class="display-time" aria-live="polite" aria-label="Current time"></div>
       <div class="display-date">
         <span id="day">day</span>,
         <span id="daynum">00</span>
@@ -16,11 +34,20 @@
         <span id="year">0000</span>
   </div>
     </div>
-
-    <footer class="footer">
-      <p>© Made with <span class="heart" aria-label="love">❤️</span> by <a href="https://github.com/chinmayjha" target="_blank" rel="noopener noreferrer">Chinmay</a></p>
-  </footer>
-  
-    <script src="script.js"></script>
+      <!-- Footer start -->
+      <footer class="foot">
+        <p class="credit">
+          Made with ❤️ by
+          <a
+            href="https://chinmayjha.tech"
+            class="chinmay-link"
+            rel="noopener"
+            >Chinmay</a
+          >
+        </p>
+        <span class="copyright" id="copyright"></span>
+      </footer>
+      <!-- Footer end -->
+      <script src="script.js"></script>
 </body>
 </html>
