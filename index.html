@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://chinmayjha.tech/Live-time/">
     <meta property="og:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
     <meta property="og:description" content="Experience a stunning real-time digital clock with modern design, elegant animations, and responsive layout for any device.">
-    <meta property="og:image" content="https://chinmayjha.tech/Live-time/favicon.svg">
+    <meta property="og:image" content="https://chinmayjha.tech/Live-time/favicon-minimal.svg">
     <meta property="og:site_name" content="Live Time & Date">
     <meta property="og:locale" content="en_US">
     
@@ -27,7 +27,7 @@
     <meta name="twitter:url" content="https://chinmayjha.tech/Live-time/">
     <meta name="twitter:title" content="Live Time & Date - Beautiful Real-time Digital Clock">
     <meta name="twitter:description" content="Experience a stunning real-time digital clock with modern design and elegant animations.">
-    <meta name="twitter:image" content="https://chinmayjha.tech/Live-time/favicon.svg">
+    <meta name="twitter:image" content="https://chinmayjha.tech/Live-time/favicon-minimal.svg">
     <meta name="twitter:creator" content="@chinmayjha_dev">
     
     <!-- Additional SEO Tags -->
@@ -36,12 +36,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-TileColor" content="#6366f1">
-    <meta name="msapplication-navbutton-color" content="#6366f1">>
+    <meta name="msapplication-navbutton-color" content="#6366f1">
     
     <!-- Favicon -->
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon.svg">
-    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="icon" href="favicon-minimal.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon-minimal.svg">
+    <link rel="shortcut icon" href="favicon-minimal.svg">
     
     <!-- Preconnect for better font loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,45 +70,33 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "screenshot": "https://chinmayjha.tech/Live-time/favicon.svg"
+      "screenshot": "https://chinmayjha.tech/Live-time/favicon-minimal.svg"
     }
     </script>
 </head>
 <body>
     <main class="app">
-        <!-- Background Elements -->
-        <div class="bg-gradient"></div>
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-        </div>
-        
         <!-- Main Content -->
         <div class="container">
-            <header class="header">
-                <h1 class="sr-only">Live Time & Date</h1>
-            </header>
-            
-            <section class="time-display-section" aria-live="polite">
-                <div class="time-container">
-                    <time class="display-time" id="display-time" aria-label="Current time">
-                        <span class="hours">12</span>
-                        <span class="separator">:</span>
-                        <span class="minutes">00</span>
-                        <span class="period">AM</span>
-                    </time>
+            <div class="clock-wrapper">
+                <div class="time-display">
+                    <span class="hours">12</span>
+                    <span class="separator">:</span>
+                    <span class="minutes">00</span>
+                    <span class="period">AM</span>
                 </div>
                 
-                <div class="date-container">
-                    <time class="display-date" id="display-date" aria-label="Current date">
-                        <span class="day-name" id="day-name">Loading</span>,
-                        <span class="day-number" id="day-number">00</span>
+                <div class="date-display">
+                    <span class="day-name" id="day-name">Loading</span>
+                    <span class="comma">,</span>
+                    <span class="date-part">
                         <span class="month-name" id="month-name">Month</span>
+                        <span class="day-number" id="day-number">00</span>
+                        <span class="comma">,</span>
                         <span class="year" id="year">0000</span>
-                    </time>
+                    </span>
                 </div>
-            </section>
+            </div>
         </div>
         
         <!-- Footer start -->

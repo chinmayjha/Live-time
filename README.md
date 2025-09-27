@@ -1,6 +1,6 @@
-# ⏰ Live Time & Date - Premium Digital Clock
+# ⏰ Live Time & Date - Minimal Digital Clock
 
-> A stunning, modern real-time digital clock with premium design, advanced animations, and cutting-edge web technologies.
+> A beautiful, minimal real-time digital clock with clean design, smooth animations, and modern web technologies.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://chinmayjha.github.io/Live-time/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -8,20 +8,20 @@
 
 ## ✨ Features
 
-### 🎨 **Premium Design**
-- **Glassmorphism UI** with advanced blur effects and transparency
-- **Dynamic gradient animations** with mesh backgrounds
-- **Floating geometric elements** with complex animations
-- **Premium typography** using Poppins and JetBrains Mono fonts
-- **Professional color system** with semantic design tokens
+### 🎨 **Minimal Design**
+- **Clean and modern UI** with subtle glassmorphism effects
+- **Minimal typography** using Inter and JetBrains Mono fonts
+- **Smooth animations** with reduced motion support
+- **Professional color system** with automatic dark mode
 - **Modern footer design** with animated gradient text effects
+- **Focus on readability** and user experience
 
 ### 🚀 **Modern Technologies**
 - **CSS Custom Properties** (CSS Variables) for consistent theming
 - **Advanced CSS Grid & Flexbox** layouts
 - **Modern JavaScript ES6+** with class-based architecture
-- **Performance optimizations** with Intersection Observer API
-- **Advanced animations** using CSS keyframes and transforms
+- **Performance optimizations** with efficient animations
+- **Minimal bundle size** for fast loading
 - **Enhanced SEO** with structured data and comprehensive meta tags
 
 ### 📱 **Responsive Excellence**
@@ -74,25 +74,26 @@
 
 ## 🎨 Design Highlights
 
-### **Glassmorphism Effects**
+### **Minimal Design Effects**
 ```css
-backdrop-filter: blur(24px) saturate(180%);
-background: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(10px);
+background: var(--surface);
+border: 1px solid var(--border);
+transition: all var(--transition-normal);
 ```
 
-### **Advanced Animations**
-- **Gradient Flow** - Animated gradient text effects
-- **Floating Elements** - Complex geometric animations
-- **Pulse Effects** - Synchronized separator blinking
-- **Heartbeat** - Smooth love emoji animation
-- **Mesh Drift** - Dynamic background movement
+### **Smooth Animations**
+- **Subtle Hover Effects** - Clean interaction feedback
+- **Smooth Transitions** - Performance-optimized animations
+- **Blinking Separator** - Gentle time indicator
+- **Focus States** - Clear accessibility indicators
+- **Dark Mode Support** - Automatic system preference detection
 
 ### **Performance Optimizations**
-- **Will-change** properties for GPU acceleration
-- **Transform3d** for hardware acceleration
-- **Prefers-reduced-motion** media queries
-- **Intersection Observer** for visibility detection
+- **Minimal CSS** - Lightweight and efficient styling
+- **Reduced JavaScript** - Essential functionality only
+- **Prefers-reduced-motion** - Accessibility support
+- **System Font Fallbacks** - Fast font loading
 
 ## 📱 Responsive Breakpoints
 
